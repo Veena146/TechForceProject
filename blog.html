@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Blog | Techforce</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+        <!-- Reuse your navbar here -->
+       <nav class="navbar">
+    <div class="container">
+      <div class="logo">Techforce</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+  <header class="contact-header">
+       <h1>Insights & Updates</h1>
+    </header>
+
+    <main class="blog-section">
+       
+
+        <div class="blog-post">
+            <h2>Top Trends in IT Services for 2025</h2>
+            <p>As technology continues to evolve, IT service providers must stay ahead. From AI-driven automation to zero-trust security models, discover the trends reshaping the tech landscape this year.</p>
+            <!-- <a href="#">Read More</a> -->
+        </div>
+
+        <div class="blog-post">
+            <h2>Why Cloud Migration is No Longer Optional</h2>
+            <p>Moving to the cloud is no longer a luxury—it's a business imperative. Learn how companies are cutting costs, increasing agility, and securing data with smart cloud strategies.</p>
+            <!-- <a href="#">Read More</a> -->
+        </div>
+
+        <div class="blog-post">
+            <h2>The Role of Staffing in Agile IT Teams</h2>
+            <p>Skilled talent is the backbone of high-performing tech teams. Explore how strategic staffing drives success in fast-paced Agile environments.</p>
+            <!-- <a href="#">Read More</a> -->
+        </div>
+
+        <div class="blog-post">
+            <h2>Custom Software vs Off-the-Shelf: What’s Right for You?</h2>
+            <p>Choosing between building custom software and buying existing tools can impact your business for years. We break down the pros and cons of both options.</p>
+            <!-- <a href="#">Read More</a> -->
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Techforce Solutions. All Rights Reserved.</p>
+    </footer>
+    <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".navbar ul");
+
+  if (toggle && navList) {
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
+});
+</script>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
+</body>
+</html>

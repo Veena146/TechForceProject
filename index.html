@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Techforce - IT Services & Staffing</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Techforce</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <header id="home" class="hero-section fade-in">
+    <h1>Empowering Innovation with Talent</h1>
+    <p>Your trusted partner in IT Services and Staffing Solutions that fuel your business growth.</p>
+    <!-- <a href="#contact"><button>Get Started</button></a> -->
+  </header>
+
+  <section id="services" class="services slide-up">
+    <h2>Our Services</h2>
+    <div class="flex">
+      <div class="card zoom-in">
+        <h3>IT Consulting & Strategy</h3>
+        <p>We analyze your current IT infrastructure and develop tailored strategies to improve efficiency, security, and scalability.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Cloud Transformation</h3>
+        <p>Seamlessly migrate your business to the cloud with minimal disruption, leveraging the latest cloud technologies for optimal performance.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Staff Augmentation</h3>
+        <p>Access a diverse talent pool of certified IT professionals to extend your team and accelerate project delivery.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Managed IT Services</h3>
+        <p>Focus on your core business while we proactively manage your IT operations, ensuring system reliability and security.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="portfolio" class="portfolio fade-in">
+    <h2>Our Portfolio</h2>
+    <p>Check out some of the successful projects we have delivered for clients across various industries.</p>
+    <div class="flex portfolio-gallery">
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" />
+        <h4>Enterprise Cloud Migration</h4>
+        <p>Successfully migrated a Fortune 500 company to AWS cloud.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" />
+        <h4>Custom CRM Development</h4>
+        <p>Built a scalable CRM system tailored for a mid-sized healthcare company.</p>
+      </div>
+      <div class="portfolio-item">
+        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" />
+        <h4>IT Staff Augmentation</h4>
+        <p>Provided over 50 skilled developers for a tech startup's product launch.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="why-choose slide-up">
+    <h2>Why Choose Techforce?</h2>
+    <div class="flex">
+      <div class="card zoom-in">
+        <h3>Expert Talent</h3>
+        <p>We hire only the best IT professionals with proven expertise across multiple industries and technologies.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Customer-Centric Approach</h3>
+        <p>Your business goals are our priority. We tailor solutions that align with your vision and deliver measurable results.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Flexible Engagement Models</h3>
+        <p>Whether you need full-time staff, consultants, or project-based teams, we adapt to your unique requirements.</p>
+      </div>
+      <div class="card zoom-in">
+        <h3>Proven Track Record</h3>
+        <p>Trusted by startups to Fortune 500 companies, we consistently exceed expectations through quality and professionalism.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="testimonials fade-in">
+    <h2>What Our Clients Say</h2>
+    <div class="testimonial-slider">
+      <div class="testimonial">
+        <p>"Techforce helped us scale our IT team quickly during a critical product launch. Their professionals were top-notch!"</p>
+        <h4>- Sarah M., CTO, FinTech Corp</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Thanks to Techforce’s consulting, we optimized our cloud infrastructure, saving 30% on costs."</p>
+        <h4>- John D., IT Manager, HealthPlus</h4>
+      </div>
+      <div class="testimonial">
+        <p>"Excellent communication and seamless project delivery. Highly recommend for staffing solutions."</p>
+        <h4>- Linda K., CEO, Startup XYZ</h4>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta slide-up">
+    <h2>Ready to Transform Your IT?</h2>
+    <p>Partner with Techforce and gain access to top talent and innovative IT solutions tailored for your success.</p>
+    <a href="#contact"><button>Contact Us Today</button></a>
+  </section>
+
+  <section id="contact" class="contact fade-in">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <input type="tel" placeholder="Your Phone Number" />
+      <textarea placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>© 2025 Techforce. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+
+    // Simple scroll animation for fade-in and slide-up
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-up, .zoom-in');
+
+    function checkAnimation() {
+      const triggerBottom = window.innerHeight * 0.85;
+
+      animatedElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < triggerBottom) {
+          el.classList.add('animate');
+        }
+      });
+    }
+
+    window.addEventListener('scroll', checkAnimation);
+    window.addEventListener('load', checkAnimation);
+  </script>
+ <!-- Chat Toggle Button -->
+<div id="chat-toggle" onclick="toggleChat()">💬</div>
+
+<!-- Chatbot Container (Initially Hidden) -->
+<div class="chatbot-container" id="chatbot" style="display: none;">
+  <div class="chat-header">Chat with us!
+    <span style="float:right; cursor:pointer;" onclick="toggleChat()">✖</span>
+  </div>
+  <div class="chat-box" id="chat-box">
+    <div class="bot-message">Hi! How can I help you today?</div>
+  </div>
+  <input type="text" id="user-input" placeholder="Type a message..." onkeydown="if(event.key==='Enter') sendMessage()">
+</div>
+<script>
+function toggleChat() {
+  const chatbot = document.getElementById("chatbot");
+  chatbot.style.display = chatbot.style.display === "none" ? "block" : "none";
+}
+
+function sendMessage() {
+  const input = document.getElementById("user-input");
+  const chatBox = document.getElementById("chat-box");
+  const userText = input.value.trim();
+
+  if (userText === "") return;
+
+  const userMsg = document.createElement("div");
+  userMsg.className = "user-message";
+  userMsg.textContent = userText;
+  chatBox.appendChild(userMsg);
+
+  const botMsg = document.createElement("div");
+  botMsg.className = "bot-message";
+  botMsg.textContent = getBotResponse(userText);
+  chatBox.appendChild(botMsg);
+
+  input.value = "";
+  chatBox.scrollTop = chatBox.scrollHeight;
+}
+
+function getBotResponse(input) {
+  input = input.toLowerCase();
+
+  if (input.includes("hello") || input.includes("hi")) {
+    return "Hello! How can I assist you?";
+  } else if (input.includes("services")) {
+    return "We offer software development, cloud solutions, and staffing services.";
+  } else if (input.includes("contact")) {
+    return "You can reach us via the Contact page or email us at info@techforce.com.";
+  } else {
+    return "I'm still learning! Please check our Services or Contact pages.";
+  }
+}
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".navbar ul");
+
+  if (toggle && navList) {
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
+});
+</script>
+
+
+</body>
+</html>
+ 

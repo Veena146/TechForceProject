@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Portfolio - Techforce</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Techforce</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html" class="active">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+
+  <header class="hero-section fade-in">
+    <h1>Our Portfolio</h1>
+    <p>Showcasing some of our successful projects and partnerships.</p>
+  </header>
+
+  <section class="services slide-up">
+    <div class="flex">
+      <div class="card zoom-in">
+        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" style="width:100%; border-radius:8px;" />
+        <h3>Enterprise Cloud Migration</h3>
+        <p>Led a seamless migration for a Fortune 500 client to a hybrid cloud environment.</p>
+      </div>
+      <div class="card zoom-in">
+        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" style="width:100%; border-radius:8px;" />
+        <h3>Staff Augmentation for FinTech</h3>
+        <p>Provided certified developers and project managers to accelerate product delivery.</p>
+      </div>
+      <div class="card zoom-in">
+        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" style="width:100%; border-radius:8px;" />
+        <h3>Managed IT Services</h3>
+        <p>Delivered 24/7 monitoring and support to a healthcare provider, improving uptime by 99.9%.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta slide-up">
+    <h2>Want to see more?</h2>
+    <p>Contact us for detailed case studies and success stories.</p>
+    <a href="contact.html"><button>Get in Touch</button></a>
+  </section>
+
+  <footer>
+    <p>© 2025 Techforce. All Rights Reserved.</p>
+  </footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".navbar ul");
+
+  if (toggle && navList) {
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
+});
+</script>
+
+</body>
+</html>

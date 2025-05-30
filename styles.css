@@ -1,0 +1,501 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  background: #fff;
+  color: #333;
+  line-height: 1.6;
+}
+a {
+  text-decoration: none;
+  color: #0d47a1;
+  font-weight: 500;
+}
+a:hover {
+  color: #29b6f6;
+}
+
+.navbar {
+  background: #0d47a1;
+  color: white;
+  padding: 15px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  font-size: 1.8em;
+  font-weight: bold;
+  color: white;
+  flex-shrink: 0;
+}
+
+/* Center nav-links container but keep logo left */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  flex-grow: 1;      /* take all available space */
+}
+
+/* Make nav-links centered horizontally */
+.nav-links li {
+  display: inline-block;
+}
+
+.nav-links li a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 12px;
+  transition: background 0.3s ease;
+  border-radius: 4px;
+}
+
+.nav-links li a:hover,
+.nav-links li a.active {
+  background: #29b6f6;
+  color: #fff;
+}
+
+/* Hamburger stays on right */
+.hamburger {
+  font-size: 1.8em;
+  color: white;
+  cursor: pointer;
+  flex-shrink: 0;
+  display: none; /* show only on mobile */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: #0d47a1;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 15px 0;
+    display: none;
+  }
+  .nav-links.nav-active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+
+/* Hamburger */
+.hamburger {
+  display: none;
+  font-size: 1.8rem;
+  color: white;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+/* Hero Section */
+.hero-section {
+  background: #e3f2fd;
+  padding: 80px 20px;
+  text-align: center;
+}
+.hero-section h1 {
+  font-size: 3rem;
+  color: #0d47a1;
+  margin-bottom: 10px;
+}
+.hero-section p {
+  font-size: 1.3rem;
+  color: #555;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+}
+h2 {
+  text-align: center;
+  color: #0d47a1;
+  margin-bottom: 30px;
+}
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+  text-align: center;
+}
+.card:hover {
+  transform: translateY(-5px);
+}
+
+/* CTA */
+.cta {
+  text-align: center;
+  background: #0d47a1;
+  color: white;
+  padding: 40px 20px;
+}
+.cta button {
+  background: #29b6f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.cta button:hover {
+  background: #0288d1;
+}
+
+/* Contact Section */
+.contact {
+  background: #e3f2fd;
+}
+.contact form {
+  max-width: 600px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+.contact input,
+.contact textarea {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+}
+.contact button {
+  background: #0d47a1;
+  color: white;
+  border: none;
+  padding: 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background 0.3s ease;
+}
+.contact button:hover {
+  background: #1565c0;
+}
+
+/* Footer */
+footer {
+  background: #0d47a1;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #0d47a1;
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    display: none;
+    width: 180px;
+  }
+  .nav-links.nav-active {
+    display: flex;
+  }
+  .hamburger {
+    display: block;
+  }
+  .container {
+    justify-content: space-between;
+  }
+}
+/* Portfolio */
+.portfolio-gallery {
+  gap: 25px;
+}
+.portfolio-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  max-width: 320px;
+  text-align: center;
+  flex: 1 1 300px;
+  transition: transform 0.3s ease;
+}
+.portfolio-item img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.portfolio-item:hover {
+  transform: scale(1.05);
+}
+
+/* Testimonials */
+.testimonials {
+  background: #f4f9ff;
+  padding-bottom: 80px;
+}
+.testimonial-slider {
+  max-width: 800px;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+}
+.testimonial {
+  background: white;
+  padding: 25px 35px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin: 20px auto;
+  max-width: 600px;
+  font-style: italic;
+  color: #444;
+  opacity: 0;
+  transform: translateX(100px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.testimonial h4 {
+  margin-top: 15px;
+  font-style: normal;
+  font-weight: 600;
+  color: #0d47a1;
+  text-align: right;
+}
+
+/* Show first testimonial by default */
+.testimonial-slider .testimonial:nth-child(1) {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* Animations triggered by JS */
+.fade-in.animate {
+  animation: fadeIn 1s ease forwards;
+}
+.slide-up.animate {
+  animation: slideUp 1s ease forwards;
+}
+.zoom-in.animate {
+  animation: zoomIn 0.6s ease forwards;
+}
+
+/* Keep your existing fadeIn, slideUp, zoomIn keyframes here */
+
+/* Add spacing between sections */
+section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+  .portfolio-gallery {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+.contact-header {
+  background-color: #e6f2ff; /* light blue or use any preferred color */
+  text-align: center;
+  padding: 60px 20px;
+  margin-top: 20px;
+  border-radius: 8px;
+}
+
+.contact-header h2 {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  color: #003366;
+}
+
+.contact-header p {
+  font-size: 1.2em;
+  color: #333;
+}
+.blog-section {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.blog-section h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 40px;
+    color: #003366;
+}
+
+.blog-post {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.blog-post h2 {
+    margin-top: 0;
+    color: #004080;
+}
+
+.blog-post a {
+    color: #007bff;
+    text-decoration: none;
+    font-weight: bold;
+}
+#chat-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #004080;
+  color: white;
+  font-size: 24px;
+  width: 50px;
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+}
+
+/* Already provided earlier, just confirming you include this too: */
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  font-family: Arial, sans-serif;
+  z-index: 9999;
+}
+
+.chat-header {
+  background-color: #004080;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.chat-box {
+  max-height: 250px;
+  overflow-y: auto;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.bot-message, .user-message {
+  margin: 5px 0;
+  padding: 8px 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  display: inline-block;
+}
+
+.bot-message {
+  background-color: #f0f0f0;
+  text-align: left;
+}
+
+.user-message {
+  background-color: #d0eaff;
+  text-align: right;
+  float: right;
+  clear: both;
+}
+
+#user-input {
+  width: 100%;
+  border: none;
+  border-top: 1px solid #ccc;
+  padding: 10px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+/* Hamburger menu */
+.menu-toggle {
+  display: none;
+  cursor: pointer;
+  font-size: 24px;
+  color: white;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 20px;
+}
+
+@media screen and (max-width: 768px) {
+  .navbar ul {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #003580; /* match your navbar background */
+    z-index: 99;
+  }
+
+  .navbar ul.show {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 15px;
+  }
+
+  .navbar {
+    position: relative;
+  }
+}

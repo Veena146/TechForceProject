@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us - VayuhTech</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+ 
+
+  <nav class="navbar">
+    <div class="container">
+      <div class="logo">Techforce</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="testimonials.html">Testimonials</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="blog.html">Blog</a></li>
+
+      </ul>
+      <div class="hamburger" id="hamburger">&#9776;</div>
+    </div>
+  </nav>
+   <header>
+    <div class="contact-header">
+    <h1 class="fade-in">About Techforce</h1>
+    <p class="slide-up">Driven by Innovation. Focused on People.</p> </div>
+  </header>
+  <div class="card">
+  <img src="images/about.avif" alt="Our Team" />
+</div>
+<div class="card">
+  <p>
+    TechForce is a leading IT services and staffing company with over 10 years of experience.
+    Our dedicated team ensures quality solutions and staffing excellence to help your business grow.
+  </p>
+  <p>
+    We pride ourselves on innovation, commitment, and customer satisfaction.
+  </p>
+</div>
+
+
+  <footer>
+    <p>© 2025 VayuhTech Solutions. All Rights Reserved.</p>
+  </footer>
+  <script>
+document.addEventListener("DOMContentLoaded", function () {
+  const toggle = document.querySelector(".menu-toggle");
+  const navList = document.querySelector(".navbar ul");
+
+  if (toggle && navList) {
+    toggle.addEventListener("click", () => {
+      navList.classList.toggle("show");
+    });
+  }
+});
+</script>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navLinks = document.getElementById('navLinks');
+    hamburger.addEventListener('click', () => {
+      navLinks.classList.toggle('nav-active');
+    });
+  </script>
+</body>
+</html>
