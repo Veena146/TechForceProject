@@ -251,7 +251,7 @@ footer {
 }
 .portfolio-item {
   background: white;
-  padding: 15px;
+  padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   max-width: 320px;
@@ -508,4 +508,22 @@ img {
   .responsive-image {
     width: 100%;
   }
+}
+a.active {
+  color: #ffffff;              /* White text */
+  background-color: #004080;   /* Dark blue background */
+  font-weight: bold;           /* Improves readability */
+  padding: 10px 15px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+}
+.about-image-container {
+  text-align: center;
+}
+
+.about-image-container img {
+  max-width: 100%;
+  height: auto;
+  display: inline-block;
 }

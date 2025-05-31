@@ -56,17 +56,17 @@
     <p>Check out some of the successful projects we have delivered for clients across various industries.</p>
     <div class="flex portfolio-gallery">
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+1" alt="Project 1" />
+        <!-- <img src="images/Cloud-Migration-.webp" alt="Project 1" /> -->
         <h4>Enterprise Cloud Migration</h4>
         <p>Successfully migrated a Fortune 500 company to AWS cloud.</p>
       </div>
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+2" alt="Project 2" />
+        <!-- <img src="images/th.jfif" alt="Project 2" /> -->
         <h4>Custom CRM Development</h4>
         <p>Built a scalable CRM system tailored for a mid-sized healthcare company.</p>
       </div>
       <div class="portfolio-item">
-        <img src="https://via.placeholder.com/300x200?text=Project+3" alt="Project 3" />
+        <!-- <img src="images/Screenshot 2025-05-31 131718.jpg" alt="Project 3" /> -->
         <h4>IT Staff Augmentation</h4>
         <p>Provided over 50 skilled developers for a tech startup's product launch.</p>
       </div>
@@ -122,9 +122,13 @@
   <section id="contact" class="contact fade-in">
     <h2>Contact Us</h2>
     <form>
-      <input type="text" placeholder="Your Name" required />
+      <label for="name">Name:</label>
+      <input type="text" placeholder="Your Name" required pattern="[A-Za-z\s]+" title="Name should only contain letters and spaces" />
+      <label for="email">Email:</label>
       <input type="email" placeholder="Your Email" required />
-      <input type="tel" placeholder="Your Phone Number" />
+      <label for="phone">Phone Number:</label>
+      <input type="tel" placeholder="Your Phone Number" pattern="[6-9]\d{9}" title="Enter a valid 10-digit phone number starting with 6, 7, 8, or 9"  />
+      <label for="message">Message:</label>
       <textarea placeholder="Your Message" rows="5" required></textarea>
       <button type="submit">Send Message</button>
     </form>
